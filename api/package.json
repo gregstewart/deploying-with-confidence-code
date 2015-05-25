@@ -1,0 +1,11 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "Simple hapi.js api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Greg Stewart",
+  "license": "MIT"
+}
