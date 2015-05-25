@@ -4,11 +4,13 @@
   "description": "Simple hapi.js api",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "author": "Greg Stewart",
   "license": "MIT",
   "dependencies": {
+    "babel": "^5.4.7",
     "hapi": "^8.5.1"
   }
 }
