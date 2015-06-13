@@ -6,6 +6,9 @@ import welcome from './routes/welcome';
 import notFound from './routes/not-found';
 
 let initialState = {
+  api: {
+    baseUri: 'http://localhost:8000'
+  },
   serverStatus: {
     status: null
   }

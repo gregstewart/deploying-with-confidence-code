@@ -5,7 +5,6 @@ class WelcomeRoute extends BaseRoute {
     let responseStatus = status.deref();
     let url;
 
-    console.log(responseStatus);
     switch (responseStatus) {
       case 'alive':
         url = 'http://www.bluetrain.ca/wp-content/uploads/its_alive.jpg';
@@ -14,7 +13,7 @@ class WelcomeRoute extends BaseRoute {
         url = 'https://spiritualmusclehead.files.wordpress.com/2013/04/hes-dead-jim.jpg';
         break;
       default:
-        url = 'http://sticktwiddlers.com/wp-content/uploads/2012/08/one-does-not-simply-keep-the-servers-online1.png';
+        url = 'http://cdn.meme.am/instances/500x/52426766.jpg';
         break;
     }
 

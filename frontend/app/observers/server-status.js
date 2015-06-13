@@ -1,9 +1,9 @@
 import request from 'superagent';
 import Promise from 'bluebird';
 
-let getStatus = () => {
+let getStatus = (apiEndpoint) => {
   return new Promise((resolve, reject) => {
-    let req = request.get('http://localhost:8000/ping')
+    let req = request.get(apiEndpoint + '/ping')
       .set('Accept', 'application/json');
 
     req.end(function (error, response) {
@@ -16,21 +16,30 @@ let getStatus = () => {
   });
 };
 
-let pollForStatus = (serverStatus) => {
+let sendRequest = (state) => {
+  let uri = state.get('state.api.baseUri').deref();
+  let serverStatus = state.get('state.serverStatus');
+
+  return getStatus(uri)
+    .then(() => {
+      serverStatus.get('status').update(() => 'alive');
+    })
+    .catch(() => {
+      serverStatus.get('status').update(() => 'dead');
+    });
+}
+
+let pollForStatus = (state) => {
   setTimeout(() => {
-    getStatus()
-      .then(() => {
-        serverStatus.get('status').update(() => 'alive');
-      })
-      .catch(() => {
-        serverStatus.get('status').update(() => 'dead');
-      });
-    pollForStatus(serverStatus);
+    sendRequest(state);
+    pollForStatus(state);
   }, 5000);
 };
 
 export default (state) => {
-  let serverStatus = state.get('state.serverStatus');
-
-  pollForStatus(serverStatus);
+  if (process.env.ARCH_ENV === 'browser') {
+    pollForStatus(state);
+  } else {
+    sendRequest(state);
+  }
 };
