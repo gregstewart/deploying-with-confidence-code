@@ -4,7 +4,12 @@ import Hapi from 'hapi';
 let server = new Hapi.Server();
 server.connection({
     host: 'localhost',
-    port: 8000
+    port: 8000,
+    routes: {
+      cors: {
+        origin: ['*']
+      }
+    }
 });
 
 // Add the route

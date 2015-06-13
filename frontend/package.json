@@ -4,8 +4,10 @@
   "main": "app/app",
   "scripts": {},
   "dependencies": {
+    "arch": "git+https://github.com/redbadger/arch",
     "babel": "^5.4.7",
-    "arch": "git+https://github.com/redbadger/arch"
+    "bluebird": "^2.9.27",
+    "superagent": "^1.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^3.1.15",

@@ -1,10 +1,14 @@
 import arch from 'arch';
 
+import initObservers from './observers/init';
+
 import welcome from './routes/welcome';
 import notFound from './routes/not-found';
 
 let initialState = {
-  message: 'I am immutable!'
+  serverStatus: {
+    status: null
+  }
 };
 
 let app = arch.application.create({
@@ -13,7 +17,7 @@ let app = arch.application.create({
   },
 
   start(appState) {
-    appState.get('state.message').update(() => 'I was updated!');
+    initObservers(appState);
   },
 
   routes() {

@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": [2, "single"],
+    "indent": [2, 2],
+    "max-depth": [1, 4],
+    "max-statements": [1, 15],
+    "complexity": [1, 10],
+    "strict": 0,
+  }
+}

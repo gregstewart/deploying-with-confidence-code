@@ -1,9 +1,4 @@
 import BaseRoute from './base-route';
-import arch from 'arch';
-import Layout from '../components/layout'
-
-let layout = arch.dom(Layout);
-let d = arch.DOM;
 
 class NotFoundRoute extends BaseRoute {
   getTitle() {
@@ -11,8 +6,10 @@ class NotFoundRoute extends BaseRoute {
   }
 
   render() {
-    return layout(
-      d.h1('Page Not Found')
+    return (
+      <div className="container">
+        <h1>('Page Not Found'</h1>
+      </div>
     );
   }
 }
