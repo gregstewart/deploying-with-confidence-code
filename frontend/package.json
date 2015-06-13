@@ -2,7 +2,10 @@
   "name": "app",
   "version": "0.0.0",
   "main": "app/app",
-  "scripts": {},
+  "scripts": {
+    "test": "test",
+    "start": "node node_modules/arch/bin/server"
+  },
   "dependencies": {
     "arch": "git+https://github.com/redbadger/arch",
     "babel": "^5.4.7",
