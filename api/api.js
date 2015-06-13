@@ -10,9 +10,9 @@ server.connection({
 // Add the route
 server.route({
     method: 'GET',
-    path:'/ping',
+    path: '/ping',
     handler: function (request, reply) {
-       reply({response: 'pong'});
+      reply({response: 'pong'});
     }
 });
 
