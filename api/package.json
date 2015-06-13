@@ -4,7 +4,7 @@
   "description": "Simple hapi.js api",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "gulp jasmine",
     "start": "node index.js"
   },
   "author": "Greg Stewart",
