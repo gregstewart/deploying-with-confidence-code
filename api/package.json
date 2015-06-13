@@ -15,6 +15,11 @@
   },
   "devDependencies": {
     "babel-eslint": "^3.1.15",
-    "eslint": "^0.22.1"
+    "eslint": "^0.22.1",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^0.13.2",
+    "gulp-jasmine": "^2.0.1",
+    "gulp-util": "^3.0.5",
+    "jasmine-spec-reporter": "^2.2.3"
   }
 }
