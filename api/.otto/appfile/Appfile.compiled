@@ -1,0 +1,67 @@
+{
+    "File": {
+        "ID": "d6481f70-20f7-1ab7-0424-e1b10063a9e7",
+        "Path": "/Users/gregstewart/Projects/GitHub/deploying-with-confidence-code/api/Appfile",
+        "Source": "",
+        "Application": {
+            "Name": "api",
+            "Type": "node",
+            "Dependencies": null
+        },
+        "Project": {
+            "Name": "api",
+            "Infrastructure": "api"
+        },
+        "Infrastructure": [
+            {
+                "Name": "api",
+                "Type": "aws",
+                "Flavor": "simple",
+                "Foundations": [
+                    {
+                        "Name": "consul",
+                        "Config": null
+                    }
+                ]
+            }
+        ],
+        "Customization": null,
+        "Imports": null
+    },
+    "Vertices": [
+        {
+            "File": {
+                "ID": "d6481f70-20f7-1ab7-0424-e1b10063a9e7",
+                "Path": "/Users/gregstewart/Projects/GitHub/deploying-with-confidence-code/api/Appfile",
+                "Source": "",
+                "Application": {
+                    "Name": "api",
+                    "Type": "node",
+                    "Dependencies": null
+                },
+                "Project": {
+                    "Name": "api",
+                    "Infrastructure": "api"
+                },
+                "Infrastructure": [
+                    {
+                        "Name": "api",
+                        "Type": "aws",
+                        "Flavor": "simple",
+                        "Foundations": [
+                            {
+                                "Name": "consul",
+                                "Config": null
+                            }
+                        ]
+                    }
+                ],
+                "Customization": null,
+                "Imports": null
+            },
+            "Dir": "",
+            "NameValue": "api"
+        }
+    ],
+    "Edges": []
+}

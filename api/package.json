@@ -1,6 +1,7 @@
 {
   "name": "api",
   "version": "0.0.1",
+  "repository": "https://github.com/gregstewart/deploying-with-confidence-code",
   "description": "Simple hapi.js api",
   "main": "index.js",
   "scripts": {

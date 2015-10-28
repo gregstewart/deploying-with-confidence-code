@@ -3,7 +3,7 @@ import Hapi from 'hapi';
 // Create a server with a host and port
 let server = new Hapi.Server();
 server.connection({
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 8000,
     routes: {
       cors: {
